@@ -1,0 +1,154 @@
+{
+  "forms": [
+    {
+      "id": "form-1",
+      "name": "User Info Form",
+      "fields": [
+        {
+          "id": "textInput1",
+          "label": "Text Input",
+          "type": "text",
+          "placeholder": "Some text",
+          "validations": [
+            { "type": "text", "value": "", "placeholder": "Min", "label": "Min", "code": "min" },
+            { "type": "text", "value": "", "placeholder": "Max", "label": "Max", "code": "max" },
+            { "type": "checkbox", "value": false, "label": "Required", "code": "required" }
+          ]
+        },
+        {
+          "id": "emailInput1",
+          "label": "Email Input",
+          "type": "email",
+          "placeholder": "example@gmail.com",
+          "validations": [
+            { "type": "checkbox", "value": false, "label": "Required", "code": "required" }
+          ]
+        },
+        {
+          "id": "numberInput1",
+          "label": "Number Input",
+          "type": "number",
+          "placeholder": "25",
+          "validations": [
+            { "type": "text", "value": "", "placeholder": "Min", "label": "Min", "code": "min" },
+            { "type": "text", "value": "", "placeholder": "Max", "label": "Max", "code": "max" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "form-2",
+      "name": "Preferences Form",
+      "fields": [
+        {
+          "id": "colorInput1",
+          "label": "Color Input",
+          "type": "color",
+          "validations": [
+            { "type": "checkbox", "value": false, "label": "Required", "code": "required" }
+          ]
+        },
+        {
+          "id": "radioInput1",
+          "label": "Radio Input",
+          "type": "radio",
+          "options": ["Option 1", "Option 2"],
+          "validations": [
+            { "type": "checkbox", "value": false, "label": "Required", "code": "required" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "form-3",
+      "name": "Account Settings",
+      "fields": [
+        {
+          "id": "checkboxInput1",
+          "label": "Checkbox Input",
+          "type": "checkbox",
+          "validations": [
+            { "type": "checkbox", "value": false, "label": "Required", "code": "required" }
+          ]
+        },
+        {
+          "id": "rangeInput1",
+          "label": "Range Input",
+          "type": "range",
+          "min": 0,
+          "max": 100,
+          "value": 50,
+          "validations": [
+            { "type": "text", "value": 0, "placeholder": "Min", "label": "Min", "code": "min" },
+            { "type": "text", "value": 100, "placeholder": "Max", "label": "Max", "code": "max" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "form-4",
+      "name": "Actions Form",
+      "fields": [
+        {
+          "id": "buttonInput1",
+          "label": "Button",
+          "type": "button",
+          "validations": []
+        },
+        {
+          "id": "selectInput1",
+          "label": "Select",
+          "type": "select",
+          "options": ["A", "B"],
+          "validations": [
+            { "type": "checkbox", "value": false, "label": "Required", "code": "required" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "form-5",
+      "name": "Full Form",
+      "fields": [
+        {
+          "id": "textInput2",
+          "label": "Text Input",
+          "type": "text",
+          "placeholder": "Some text",
+          "validations": [
+            { "type": "text", "value": "", "placeholder": "Min", "label": "Min", "code": "min" },
+            { "type": "text", "value": "", "placeholder": "Max", "label": "Max", "code": "max" },
+            { "type": "checkbox", "value": false, "label": "Required", "code": "required" }
+          ]
+        },
+        {
+          "id": "emailInput2",
+          "label": "Email Input",
+          "type": "email",
+          "placeholder": "example@gmail.com",
+          "validations": [
+            { "type": "checkbox", "value": false, "label": "Required", "code": "required" }
+          ]
+        },
+        {
+          "id": "numberInput2",
+          "label": "Number Input",
+          "type": "number",
+          "placeholder": "25",
+          "validations": [
+            { "type": "text", "value": "", "placeholder": "Min", "label": "Min", "code": "min" },
+            { "type": "text", "value": "", "placeholder": "Max", "label": "Max", "code": "max" }
+          ]
+        },
+        {
+          "id": "checkboxInput2",
+          "label": "Checkbox Input",
+          "type": "checkbox",
+          "validations": [
+            { "type": "checkbox", "value": false, "label": "Required", "code": "required" }
+          ]
+        }
+      ]
+    }
+  ]
+}
