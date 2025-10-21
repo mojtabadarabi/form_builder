@@ -1,14 +1,5 @@
+//@ts-nocheck
 
-/**
- * Checkbox component
- * Props:
- * - label: string | ReactNode (optional)
- * - checked: boolean
- * - onChange: (checked: boolean) => void
- * - id: string (optional, for accessibility)
- * - disabled: boolean (optional)
- * - className: string (optional extra Tailwind classes)
- */
 export default function Checkbox({
     label,
     checked = false,

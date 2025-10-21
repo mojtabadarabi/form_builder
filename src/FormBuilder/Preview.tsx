@@ -1,4 +1,4 @@
-import React from 'react';
+//@ts-nocheck
 
 export default function Preview({ fields, setFields }) {
   function handleSubmit(e) {

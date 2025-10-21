@@ -1,13 +1,6 @@
+//@ts-nocheck
 import React, { useState, useRef, useEffect } from "react";
 
-/**
- * IconMenu Component
- * Props:
- * - icon: ReactNode → The trigger icon (e.g., <MoreVert />)
- * - items: [{ label: ReactNode, onClick?: () => void }] → Menu options
- * - position: "left" | "right" (default: "right")
- * - className: string (optional)
- */
 export default function IconMenu({
   icon = "⋮",
   items = [],

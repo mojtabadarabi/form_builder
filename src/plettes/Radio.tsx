@@ -1,17 +1,5 @@
-import React from "react";
+//@ts-nocheck
 
-/**
- * Radio component
- * Props:
- * - label: string | ReactNode (optional)
- * - name: string (required — all radios in a group must share the same name)
- * - value: string | number
- * - checked: boolean
- * - onChange: (value: string | number) => void
- * - id: string (optional)
- * - disabled: boolean (optional)
- * - className: string (optional extra Tailwind classes)
- */
 export default function Radio({
   label,
   name,

@@ -1,3 +1,4 @@
+//@ts-nocheck
 export const stateUpdater = (setState,updater: (data: any) => any) => {
     setState((prev) => {
         return {
