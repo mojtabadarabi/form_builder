@@ -9,7 +9,8 @@ export default function TextInput({
     disabled = false,
     className = "",
     error = "",
-    required = false
+    required = false,
+    ...rest
 }) {
     const inputId = id || `input-${Math.random().toString(36).substring(2, 8)}`;
 
@@ -18,16 +19,18 @@ export default function TextInput({
             {label && (
                 <label
                     htmlFor={inputId}
-                    className="mb-1 text-sm font-medium text-gray-700"
+                    className="mb-1 text-sm opacity-50 font-medium text-gray-700"
                 >
                     {label}
                     {required && <span className="text-red-500 mx-1">*</span>}
                 </label>
             )}
             <input
+                {...rest}
                 id={inputId}
                 type={type}
                 value={value}
+                {...(value!==null?{value}:{})}
                 {...(type == 'checkbox' ? { checked: value } : {})}
                 placeholder={placeholder}
                 disabled={disabled}

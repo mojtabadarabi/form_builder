@@ -1,3 +1,4 @@
+import Divider from "@/Divider";
 import useForms from "@/hooks/useForms";
 import Table from "@/table/Table";
 import { MdOutlineEdit } from "react-icons/md";
@@ -8,9 +9,9 @@ export default function HomePage() {
     const { forms, loading, deleteForm } = useForms();
 
     const columns = [
-        { key: 'name', header: 'فرم', sortable: true },
+        { key: 'name', header: 'Name', sortable: true },
         {
-            key: 'operations', header: 'عملیات', sortable: false, render: (item: any) => {
+            key: 'operations', header: 'Operation', sortable: false, render: (item: any) => {
                 return <div className="flex items-center gap-4">
                     <Link to={'/forms/' + item.id}><MdOutlineEdit size={18} /></Link>
                     <button className="cursor-pointer" onClick={() => deleteForm(item?.id)} ><RiDeleteBin7Line size={18} /></button>
@@ -21,11 +22,12 @@ export default function HomePage() {
 
     if (loading) return null
     return (
-        <div>
+        <div className="flex flex-col gap-4">
             <div className="flex justify-between items-center mb-4 text-sm">
-                <h1>فرم ها</h1>
-                <Link to={'forms/create'} className="bg-slate-200 p-2 text-xs cursor-pointer rounded-md">افزودن فرم جدید</Link>
+                <h1 className="text-3xl font-medium">Forms</h1>
+                <Link to={'forms/create'} className="bg-slate-200 p-2 text-sm cursor-pointer rounded-md">Add new form</Link>
             </div>
+            <Divider/>
             <div className="ps-4">
                 <Table columns={columns} items={forms} />
             </div>

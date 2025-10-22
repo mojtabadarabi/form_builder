@@ -14,11 +14,11 @@ export default function FormFields({form,handleEdit,handleRemove,dragging}:any) 
                     <div className={`p-2 flex items-center gap-4 ${dragging == index && 'border border-dashed border-slate-400'}`}>
                         <IconMenu icon={<IoMdMore size={22} />} items={[
                             {
-                                label: <div className='flex items-center gap-2'><BiEdit size={18} /><span>ویرایش</span></div>,
+                                label: <div className='flex items-center gap-2'><BiEdit size={18} /><span>Edit</span></div>,
                                 onClick: () => handleEdit(f.id)
                             },
                             {
-                                label: <div className='flex items-center gap-2'><TiDeleteOutline size={18} /><span>حذف</span></div>,
+                                label: <div className='flex items-center gap-2'><TiDeleteOutline size={18} /><span>Delete</span></div>,
                                 onClick: () => handleRemove(f.id)
                             },
                         ]} />

@@ -24,7 +24,7 @@ export default function Radio({
         type="radio"
         name={name}
         value={value}
-        checked={checked}
+        {...(checked!==null?{checked}:{})}
         disabled={disabled}
         onChange={() => onChange?.(value)}
         className="h-4 w-4 accent-blue-600 border-gray-300 focus:ring-2 focus:ring-blue-500"

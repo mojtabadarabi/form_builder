@@ -7,7 +7,7 @@ export default function PreviewForm({ form }:{form:FormSchema}) {
             {
                 form.fields.map((field:FormField) => (
                     <>
-                        {field.render?.({ ...field, ...changeToObject(field?.validations || []), disabled: false })}
+                        {field.render?.({ ...field, ...changeToObject(field?.validations || []), disabled: false,value:null,checked:null })}
                     </>
                 ))
             }

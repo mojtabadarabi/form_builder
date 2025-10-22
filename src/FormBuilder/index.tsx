@@ -5,6 +5,7 @@ import Palette from './Palette';
 // import Preview from './Preview';
 import Modal from '@/components/Modal';
 import { Button } from '@/components/ui/Button';
+import Divider from '@/Divider';
 import useForms from '@/hooks/useForms';
 import TextInput from '@/plettes/TextInput';
 import type { FormField, FormSchema } from '@/types';
@@ -94,10 +95,11 @@ export default function FormBuilder({ initialForm }: { initialForm?: FormSchema 
       onDragMove={(props) => setDragging(props?.over?.data?.current?.sortable?.index)}
     >
       <form onSubmit={handleSubmit}>
-        <div className="flex items-start relative justify-between gap-10 h-full">
-          <aside className='w-[450px]  h-full'><Palette /></aside>
-          <section className="  p-4 w-full shadow bg-white m-4 rounded-md">
-            <TextInput value={form.name} onChange={(value: string) => stateUpdater(setForm, () => ({ name: value }))} type='text' placeholder='نام فرم' className='mb-4 w-fit' />
+        <div className="flex items-start  relative justify-between gap-10 h-full">
+
+          <section className="  p-4 w-full  bg-white m-4 rounded-md">
+            <TextInput value={form.name} label='Form name' onChange={(value: string) => stateUpdater(setForm, () => ({ name: value }))} type='text' placeholder='Form name' className='mb-4 w-fit' />
+            <Divider />
             <FormFields
               form={form}
               handleEdit={handleEdit}
@@ -105,33 +107,38 @@ export default function FormBuilder({ initialForm }: { initialForm?: FormSchema 
               dragging={dragging}
             />
           </section>
-          <Modal size='lg' title={'ویرایش فیلد'} isOpen={isEditFieldModalOpen} onClose={toggleEditFieldModal}>
+          <aside className='w-[450px] sticky top-4 h-full'>
+            <Palette />
+            <Divider className='my-10'/>
+            <div className='w-full flex my-6 justify-end'>
+              <Button
+                className='w-[50%]'
+                type='submit'
+              >
+                Save
+              </Button>
+              <Button
+                className='mx-2 w-[50%]'
+                //@ts-ignore
+                onClick={() => setIsPreviewModalOpen(form)}
+                type='button'
+              >
+                Preview
+              </Button>
+            </div>
+          </aside>
+          <Modal size='lg' title={'Edit field'} isOpen={isEditFieldModalOpen} onClose={toggleEditFieldModal}>
             <EditField
               //@ts-ignore
               field={isEditFieldModalOpen} handleEditField={handleEditField} />
           </Modal>
-          <Modal size='lg' title={' پیش نمایش'} isOpen={isPreviewModalOpen} onClose={togglePreviewModal}>
+          <Modal size='lg' title={'Preview'} isOpen={isPreviewModalOpen} onClose={togglePreviewModal}>
             <PreviewForm
               //@ts-ignore
               form={form} />
           </Modal>
         </div>
-        <div className='w-full flex justify-end'>
-          <Button
-            className=''
-            type='submit'
-          >
-            ذخیره
-          </Button>
-          <Button
-            className='mx-2'
-            //@ts-ignore
-            onClick={() => setIsPreviewModalOpen(form)}
-            type='button'
-          >
-            پیش نمایش
-          </Button>
-        </div>
+
       </form>
     </DndContext>
   );

@@ -1,6 +1,6 @@
 const AppSettings={
     sideBarMenu:[
-        {id:1,title:'فرم ها',createRoute:()=>`/`},
+        {id:1,title:'Forms',createRoute:()=>`/`},
     ]
 }
 

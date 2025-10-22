@@ -16,15 +16,6 @@
           ]
         },
         {
-          "id": "emailInput1",
-          "label": "Email Input",
-          "type": "email",
-          "placeholder": "example@gmail.com",
-          "validations": [
-            { "type": "checkbox", "value": false, "label": "Required", "code": "required" }
-          ]
-        },
-        {
           "id": "numberInput1",
           "label": "Number Input",
           "type": "number",
@@ -118,15 +109,6 @@
           "validations": [
             { "type": "text", "value": "", "placeholder": "Min", "label": "Min", "code": "min" },
             { "type": "text", "value": "", "placeholder": "Max", "label": "Max", "code": "max" },
-            { "type": "checkbox", "value": false, "label": "Required", "code": "required" }
-          ]
-        },
-        {
-          "id": "emailInput2",
-          "label": "Email Input",
-          "type": "email",
-          "placeholder": "example@gmail.com",
-          "validations": [
             { "type": "checkbox", "value": false, "label": "Required", "code": "required" }
           ]
         },

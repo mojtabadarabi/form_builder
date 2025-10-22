@@ -49,7 +49,7 @@ export default function Modal({
       <div
         ref={modalRef}
         //@ts-ignore
-        className={`bg-white rounded-2xl h-[80vh] overflow-auto shadow-xl w-full ${sizeClasses[size]} mx-4 transform transition-all duration-300 scale-100 ${className}`}
+        className={`bg-white rounded-2xl h-[80vh] overflow-auto shadow-xl flex flex-col w-full ${sizeClasses[size]} mx-4 transform transition-all duration-300 scale-100 ${className}`}
       >
         {title && (
           <div className="flex justify-between items-center px-5 py-3 border-b border-gray-200">
@@ -63,7 +63,7 @@ export default function Modal({
           </div>
         )}
 
-        <div className="p-5">{children}</div>
+        <div className="p-5 h-full">{children}</div>
       </div>
     </div>
   );
